@@ -1,14 +1,19 @@
 <template>
     <div id ="nav">     
-            <h2 id ="titulo">Interface Vue com CRUD</h2>
-        <div id ="button-nav"> 
-            <router-link  to="/">Home</router-link> |
-            <router-link  to="/about">About</router-link> |
-
-            <router-link  to="/add-user">Adicionar usuario</router-link>
-        </div>
+        <h3 id ="titulo">Interface Vue com CRUD</h3>
     </div>
-     <router-view/>
+    <div class="fixed-action-btn">
+      <router-link to="edit-user" class="btn-floating btn-large blue">
+        <i class="fa fa-pencil"></i>
+      </router-link>
+      <router-link to="add-user" class="btn-floating btn-large blue">
+        <i class="fa fa-plus" ></i>
+      </router-link>
+      <router-link to="/" class="btn-floating btn-large blue">
+        <i class="fa fa-list" ></i>
+      </router-link>
+    </div>
+    <router-view/>
 </template>
 <script>
 
@@ -20,11 +25,11 @@ export default {
 
 <style scoped>
 #nav{
-    background-color: rgb(241, 110, 110);
+    background-color: rgb(66, 140, 224);
     border-bottom: 4px solid #111;
     padding: 15px 50px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     
 }
@@ -34,6 +39,6 @@ export default {
 }
 #titulo{
     color: rgb(255, 255, 255);
-    justify-content: left;
+    justify-content: center;
 }
 </style>
